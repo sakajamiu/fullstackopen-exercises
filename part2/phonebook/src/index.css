@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+ color:turquoise;
+ text-align: center;
+
+}
+.app{
+  border-style:outset; 
+  width: 500px;
+  margin: 0 auto;
+  border-color: turquoise;
+}
+.error{
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.success{
+  color:green;
+  background: lightcyan;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+h2{
+  color: burlywood
+}
+form > div{
+  margin: 10px, 10px;
+  padding-top: 10px;
+}
+form >div> button{
+
+  border-radius: 4pt;
+  padding: 8px;
+  
+}
+form > div>button:hover{
+  background-color: rgb(130, 245, 130);
+  border-style: none;
+  padding: 20px;
+
+}
+.contactDisplay > button{
+  margin-left: 15px;
+  border-radius: 15pt;
+  padding: 8px;
+  border-color: silver;
+}
+.contactDisplay>button:hover{
+  background-color: red;
+  border-style: none;
 }
