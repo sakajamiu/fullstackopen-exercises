@@ -2,6 +2,8 @@ const { response, request } = require('express')
 const express = require('express')
 app = express()
 app.use(express.json())
+const cors = require('cors')
+app.use(cors())
 const morgan = require('morgan')
 morgan.token('requestData',(request,response) => { return JSON.stringify(request.body) })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :requestData',{
@@ -12,22 +14,22 @@ let persons = [
     { 
       "id": 1,
       "name": "Arto Hellas", 
-      "number": "040-123456"
+      "phone": "040-123456"
     },
     { 
       "id": 2,
       "name": "Ada Lovelace", 
-      "number": "39-44-5323523"
+      "phone": "39-44-5323523"
     },
     { 
       "id": 3,
       "name": "Dan Abramov", 
-      "number": "12-43-234345"
+      "phone": "12-43-234345"
     },
     { 
       "id": 4,
       "name": "Mary Poppendieck", 
-      "number": "39-23-6423122"
+      "phone": "39-23-6423122"
     }
 ]
 app.get('/',(request,response)=>{
@@ -66,7 +68,7 @@ app.post('/api/persons',(request,response)=>{
          response.status(400).json({
              "error": "missing content"
          })
-     }else if(!body.name || !body.number ){
+     }else if(!body.name || !body.phone ){
          response.status(400).json({
              "error":"name or number is null "
          })
@@ -80,7 +82,7 @@ app.post('/api/persons',(request,response)=>{
      const person =  {
          id: id,
          name: body.name,
-         number: body.number
+         phone: body.phone
      }
     persons = persons.concat(person)
      response.json(person)
