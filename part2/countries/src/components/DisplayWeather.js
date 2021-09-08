@@ -2,6 +2,7 @@
 import React from 'react'
 
 const DisplayWeather = ({weatherReport})=>{
+    console.log(weatherReport)
 
     return(
         <div>

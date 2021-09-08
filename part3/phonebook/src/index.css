@@ -1,0 +1,64 @@
+
+body{
+ 
+ text-align: center;
+
+
+}
+.app{
+  border-style:outset; 
+  width: 500px;
+  margin: 0 auto;
+  border-color: turquoise;
+  background-color: silver;
+}
+.error{
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.success{
+  color:green;
+  background: lightcyan;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+h2{
+  color: rgb(252, 226, 192)
+}
+form > div{
+  margin: 10px, 10px;
+  padding-top: 10px;
+}
+form >div> button{
+
+  border-radius: 4pt;
+  border-color: rgb(169, 223, 217);
+  padding: 15px;
+  background-color: rgb(252, 226, 192);
+  font-size: medium;  
+}
+form > div>button:hover{
+  background-color: rgb(130, 245, 130);
+  border-style: none;
+  padding: 20px;
+
+}
+.contactDisplay > button{
+  margin-left: 15px;
+  border-radius: 15pt;
+  background-color:rgb(252, 226, 192) ;
+  padding: 8px;
+  border-color: rgb(169, 223, 217);
+}
+.contactDisplay>button:hover{
+  background-color: red;
+  border-style: none;
+}

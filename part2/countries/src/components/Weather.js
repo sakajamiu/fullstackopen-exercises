@@ -8,7 +8,8 @@ const Weather = (capital)=>{
     const [isLoading, setLoading] = useState(true)
     const [weatherReport, setWeatherReport] = useState([])
 
-    const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY 
+    const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY
+    
  
  
     const params ={access_key: weatherApiKey, query: capital}
@@ -18,6 +19,7 @@ const Weather = (capital)=>{
  const fetchWeather =()=>  axios.get('http://api.weatherstack.com/current', {params})
   .then(response => {
    setWeatherReport (response.data)
+   console.log(response.data)
 
    setLoading(false)
   }).catch(error => {
@@ -38,11 +40,8 @@ const Weather = (capital)=>{
 
         
         </div>
-          
-       
         
-           
-      
+    
     )
 }
 
