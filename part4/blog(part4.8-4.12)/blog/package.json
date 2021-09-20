@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "backend of the blog app",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": " cross-env Node_ENV=test jest --verbose  --runInBand"
+  },
+  "author": "jamiu",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.1.1",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
