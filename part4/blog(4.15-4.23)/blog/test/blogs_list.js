@@ -1,13 +1,12 @@
-const listHelper = require('../utilities/list_helpers')
-
+const Blog = require('../models/blog')
 const blog = []
 
 const listWithOneBlog = [
     {
-      _id: '5a422aa71b54a676234d17f8',
-      title: 'Go To Statement Considered Harmful',
+      _id: '5a422aa71b54a676234d17fe',
+      title: 'Go To Statement Considered Harmfuled',
       author: 'Edsger W. Dijkstra',
-      url: 'http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html',
+      url: 'http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmfuled.html',
       likes: 5,
       __v: 0
     }
@@ -63,46 +62,14 @@ const blogs = [
       __v: 0
     }  
 ]
+const blogsInDb = async() => {
+  const blogs = await Blog.find({})
+  return blogs
+}
 
-test('dummy return one', () =>{
-    const result = listHelper.dummy(blog)
-    expect(result).toBe(1)
-})
-
-describe('total likes', () => {
-    test('when list has only one blog, equals the likes of that', () => {
-      const result = listHelper.totalLikes(listWithOneBlog)
-      expect(result).toBe(5)
-    })
-
-    test('when list has more than one blog, equals the likes of the total likes ',() =>{
-        const result = listHelper.totalLikes(blogs)
-        expect(result).toBe(36)
-    })
-
-})
-
-describe('favorite blog', () =>{
-    test(' display blog with the highest likes, equals the likes of that', () => {
-      const result = listHelper.favoriteBlog(blogs)
-      const expected = {
-        title: "Canonical string reduction",
-        author: "Edsger W. Dijkstra",
-        likes: 12
-      }
-      expect(result).toEqual(expected)
-    })
-
-})
-describe('author with most blogs', () =>{
-  test('test if author with the highest number of blogs name and the count of blogs will be correctly returned', ()=>{
-    const result = listHelper.authorWithMostBlogs(blogs)
-    const expected ={
-      author: "Robert C. Martin",
-      blogs: 3
-    }
-    expect(result).toEqual(expected)
-  })
-})
-
-
+module.exports = {
+    blog,
+    blogs,
+    listWithOneBlog,
+    blogsInDb
+}
