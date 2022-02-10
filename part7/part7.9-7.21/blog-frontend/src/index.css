@@ -1,0 +1,79 @@
+
+.landingPage{
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    height: 100vh;
+    
+
+}
+.landingPageContainer{
+   display: flex;
+   justify-content: center;
+
+}
+.loginForm{
+    transform: translate(0,30%);
+    top:0%;
+  
+  
+    
+}
+.signUpForm{
+    transform: translate(0,8%);
+    top:0%;   
+}
+@media screen and (max-width:375px) {
+    .signUpForm{
+
+        transform: none;
+        top:0%;
+        margin-top: 0%;
+        padding-top: 0%;
+
+    }
+
+    
+}
+.formcomponent{
+    margin: 15px;
+
+}
+.error{
+    color: red;
+    border-style: solid;
+    background-color:azure;
+    font-size: 20px;
+    padding: 10px;
+    transform: translate(0,50%);
+    top:0%;
+    position: absolute;
+    width: 30rem;
+    border-radius: 10px;
+}
+.success{
+    color: green;
+    border-style: solid;
+    background-color:azure;
+    font-size: 20px;
+    padding: 10px;
+    transform: translate(0,50%);
+    top:0%;
+    position: absolute;
+    width: 30rem;
+    border-radius: 10px;
+}
+#formIcon{
+    background-color: #24cffc;
+    color:white;
+}
+
+#formLink{
+    color:#24cffc;
+    text-decoration: none;
+}
+.blog{
+    margin: 10px;
+}
+
+
+ 

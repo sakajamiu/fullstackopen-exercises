@@ -1,0 +1,49 @@
+{
+  "notes": [
+    {
+      "content": "custom-hooks are grat",
+      "id": 1
+    },
+    {
+      "content": "the best featrure ever <3",
+      "id": 2
+    },
+    {
+      "content": "hooks are awesome",
+      "id": 3
+    },
+    {
+      "content": "hooks are awesome",
+      "id": 4
+    },
+    {
+      "content": "another awesome hook",
+      "id": 5
+    },
+    {
+      "content": "jamiu",
+      "id": 6
+    },
+    {
+      "content": "testing",
+      "id": 7
+    }
+  ],
+  "persons": [
+    {
+      "name": "mluukkai",
+      "number": "040-5483923",
+      "id": 1
+    },
+    {
+      "name": "kaltsoon",
+      "number": "045-2323456",
+      "id": 2
+    },
+    {
+      "name": "jamiu",
+      "number": "0812576-172",
+      "id": 3
+    }
+  ]
+}

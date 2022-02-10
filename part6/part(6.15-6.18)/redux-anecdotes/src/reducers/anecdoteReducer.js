@@ -4,7 +4,7 @@ const reducer = (state = [], action) => {
  switch (action.type){
    case 'VOTE':
      const id = action.data.id
-     return state.map(anecdote => anecdote.id != id? anecdote : action.data)
+     return state.map(anecdote => anecdote.id !== id? anecdote : action.data)
     case 'NEW ANECDOTE':
       return state.concat(action.data)
     case 'INITIALIZE':
