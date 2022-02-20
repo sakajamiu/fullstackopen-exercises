@@ -60,12 +60,12 @@ app.post('/api/persons',(request,response,next)=>{
      let body = request.body
      if(!body){
          response.status(400).json({
-            "error": "missing content"
+             "error": "missing content"
          })
      }else if(!body.name || !body.phone ){
          response.status(400).json({
-            "error":"name or number is null "
-        })
+             "error":"name or number is null "
+         })
 
      }
     const contact = new Contact({
@@ -117,4 +117,6 @@ const errorHandler = (error, request, response, next)=>{
 
 app.use(errorHandler)
 const PORT = process.env.PORT
-app.listen(PORT,() => { console.log(`app running at ${PORT}`)})
+app.listen(PORT,() =>{
+    console.log(`app running at ${PORT}`)
+})

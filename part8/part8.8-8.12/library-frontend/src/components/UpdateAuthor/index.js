@@ -1,0 +1,1 @@
+export  { UpdateAuthor as default} from './UpdateAuthor'
